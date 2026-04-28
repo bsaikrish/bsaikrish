@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bsaikrish.github.io/sitemap.xml
