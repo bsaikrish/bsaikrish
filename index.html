@@ -1,24 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My App</title>
-    <meta name="description" content="A beautiful web application" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Krish — Student Portfolio</title>
+  <meta name="description" content="A curious 4th grader from Chennai who loves chess, cricket and chasing big dreams — one move, one run, one goal at a time." />
+  <meta name="author" content="Sai Krish" />
+  <meta property="og:title" content="Sai Krish — Student Portfolio" />
+  <meta property="og:description" content="A curious 4th grader from Chennai who loves chess, cricket and chasing big dreams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/saikrish-full.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <meta property="og:title" content="My App" />
-    <meta property="og:description" content="A beautiful web application" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- Header -->
+  <header id="site-header" class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">SAI KRISH</a>
+      <nav class="desktop-nav" id="desktop-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+      <div class="mobile-controls">
+        <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle dark mode">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="achievements.html" class="mobile-nav-link">Achievements</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Decorative glows -->
+      <div class="hero-glow hero-glow-top"></div>
+      <div class="hero-glow hero-glow-bottom"></div>
+
+      <div class="hero-inner">
+        <div class="hero-text animate-fade-up">
+          <span class="hero-badge">Portfolio · Est. 2016</span>
+          <h1 class="hero-title">Hi, I'm <span class="highlight">Sai Krish</span>.</h1>
+          <p class="hero-tagline">Student · Athlete · Chess Enthusiast</p>
+          <p class="hero-intro">A curious 4th grader from Chennai who loves chess, cricket and chasing big dreams — one move, one run, one goal at a time.</p>
+
+          <div class="hero-buttons">
+            <a href="about.html" class="btn btn-primary">About Me <span class="btn-arrow">→</span></a>
+            <a href="achievements.html" class="btn btn-outline">My Achievements</a>
+          </div>
+
+          <div class="stat-chips">
+            <div class="stat-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C6 4 6 4.5 6 4.5V9z"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C18 4 18 4.5 18 4.5V9z"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              <div class="stat-label">Gold Medal</div>
+              <div class="stat-value">100m</div>
+            </div>
+            <div class="stat-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <div class="stat-label">Favourite</div>
+              <div class="stat-value">Maths</div>
+            </div>
+            <div class="stat-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg>
+              <div class="stat-label">Dream</div>
+              <div class="stat-value">Chess GM</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-portrait animate-fade-scale">
+          <div class="portrait-glow"></div>
+          <div class="portrait-frame">
+            <img src="assets/saikrish-full.jpeg" alt="Sai Krish — full portrait" />
+            <div class="portrait-overlay">
+              <p class="portrait-label">Class of 2026</p>
+              <p class="portrait-school">DAV School, Pallikaranai, Chennai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Strip -->
+    <section class="hobbies-strip">
+      <div class="container">
+        <p class="section-label center">What I love doing</p>
+        <div class="hobby-tags">
+          <span class="hobby-tag">Cricket</span>
+          <span class="hobby-tag">Table Tennis</span>
+          <span class="hobby-tag">Chess</span>
+          <span class="hobby-tag">Athletics</span>
+          <span class="hobby-tag">Gaming</span>
+          <span class="hobby-tag">Chatting with Friends</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Goals -->
+    <section class="career-goals" id="career-goals">
+      <div class="container">
+        <div class="section-header center scroll-reveal">
+          <p class="section-label">Dream Big</p>
+          <h2 class="section-title">My Career Goals</h2>
+        </div>
+
+        <div class="goals-grid">
+          <div class="goal-card scroll-reveal" style="--delay: 0s">
+            <div class="goal-circle"></div>
+            <div class="goal-content">
+              <div class="goal-number">01</div>
+              <p class="goal-text">Become a World Chess Champion</p>
+            </div>
+          </div>
+          <div class="goal-card scroll-reveal" style="--delay: 0.08s">
+            <div class="goal-circle"></div>
+            <div class="goal-content">
+              <div class="goal-number">02</div>
+              <p class="goal-text">Win an Olympic Gold Medal in Chess</p>
+            </div>
+          </div>
+          <div class="goal-card scroll-reveal" style="--delay: 0.16s">
+            <div class="goal-circle"></div>
+            <div class="goal-content">
+              <div class="goal-number">03</div>
+              <p class="goal-text">Represent India as an all-rounder cricketer</p>
+            </div>
+          </div>
+          <div class="goal-card scroll-reveal" style="--delay: 0.24s">
+            <div class="goal-circle"></div>
+            <div class="goal-content">
+              <div class="goal-number">04</div>
+              <p class="goal-text">Lift the T20 Cricket World Cup for India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center" style="margin-top: 3rem;">
+          <a href="contact.html" class="text-link">Say hello <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Sai Krish. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
