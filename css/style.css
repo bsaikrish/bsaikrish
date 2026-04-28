@@ -66,10 +66,16 @@ ul, ol { list-style: none; }
   height: 100%; display: flex; align-items: center; justify-content: space-between;
 }
 .logo {
+  display: inline-flex; align-items: center; gap: .5rem;
   font-size: .95rem; font-weight: 300; letter-spacing: .2em;
   color: var(--fg); transition: opacity .2s;
 }
 .logo:hover { opacity: .75; }
+.logo-icon {
+  width: 24px; height: 24px;
+  object-fit: contain; flex-shrink: 0;
+  border-radius: 4px;
+}
 
 /* transparent header on hero — white logo */
 .site-header:not(.scrolled):not(.site-header--solid) .logo,
