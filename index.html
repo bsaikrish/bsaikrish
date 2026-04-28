@@ -80,6 +80,10 @@
           <div class="hero-buttons">
             <a href="about.html" class="btn btn-primary">About Me <span class="btn-arrow">→</span></a>
             <a href="achievements.html" class="btn btn-outline">My Achievements</a>
+            <button onclick="openProfileModal()" class="btn btn-download">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              View Profile
+            </button>
           </div>
 
           <div class="stat-chips">
@@ -175,6 +179,23 @@
     </section>
 
   </main>
+
+  <!-- Profile Modal -->
+  <div class="profile-modal-overlay" id="profileModal" role="dialog" aria-modal="true" aria-label="Profile preview">
+    <div class="profile-modal-box">
+      <img src="assets/Sai_Krish_Resume.jpeg" alt="Sai Krish Profile" class="profile-modal-img" />
+      <div class="profile-modal-actions">
+        <a href="assets/Sai_Krish_Resume.jpeg" download="Sai_Krish_Profile.jpeg" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download
+        </a>
+        <button onclick="closeProfileModal()" class="btn btn-modal-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">

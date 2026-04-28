@@ -77,6 +77,34 @@
     reveals.forEach(el => io.observe(el));
   }
 
+  // ── Profile Modal ─────────────────────────
+  const modal = document.getElementById('profileModal');
+
+  window.openProfileModal = function () {
+    if (!modal) return;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    modal.focus();
+  };
+
+  window.closeProfileModal = function () {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  // Close on backdrop click
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeProfileModal();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeProfileModal();
+  });
+
   // ── Footer year ───────────────────────────
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -193,6 +193,14 @@ ul, ol { list-style: none; }
 .btn-primary:hover { filter: brightness(1.1); box-shadow: 0 8px 24px hsla(217,91%,60%,.4); }
 .btn-outline { border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.05); color: #fff; backdrop-filter: blur(8px); }
 .btn-outline:hover { background: rgba(255,255,255,.12); }
+.btn-download {
+  border: 1px solid var(--accent); color: var(--accent);
+  background: transparent; gap: .5rem;
+}
+.btn-download:hover { background: hsla(217,91%,60%,.1); box-shadow: 0 4px 16px hsla(217,91%,60%,.2); }
+/* On dark hero, override to white-tinted */
+.hero .btn-download { border-color: rgba(255,255,255,.35); color: #fff; }
+.hero .btn-download:hover { background: rgba(255,255,255,.1); }
 .btn-arrow { display: inline-block; transition: transform .25s; }
 .btn:hover .btn-arrow { transform: translateX(3px); }
 
@@ -382,6 +390,45 @@ ul, ol { list-style: none; }
 .site-footer { border-top: 1px solid var(--border); padding: 3rem 0; }
 .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: center; }
 .footer-copy { font-size: .875rem; color: var(--muted); font-weight: 300; }
+
+/* ===========================
+   Profile Modal
+   =========================== */
+.profile-modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+}
+.profile-modal-overlay.open {
+  opacity: 1; pointer-events: all;
+}
+.profile-modal-box {
+  display: flex; flex-direction: column; align-items: center; gap: 1.25rem;
+  max-width: 520px; width: 100%;
+  transform: scale(.93) translateY(16px);
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+}
+.profile-modal-overlay.open .profile-modal-box {
+  transform: scale(1) translateY(0);
+}
+.profile-modal-img {
+  width: 100%; border-radius: 1rem;
+  box-shadow: 0 32px 80px rgba(0,0,0,.6);
+  object-fit: contain; max-height: 70vh;
+}
+.profile-modal-actions {
+  display: flex; gap: .875rem; flex-wrap: wrap; justify-content: center;
+}
+.btn-modal-close {
+  border: 1px solid rgba(255,255,255,.3); color: #fff;
+  background: rgba(255,255,255,.08); backdrop-filter: blur(8px);
+}
+.btn-modal-close:hover { background: rgba(255,255,255,.18); }
 
 /* ===========================
    Animations
